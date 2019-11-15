@@ -46,6 +46,7 @@ def main(pre,post,PDB):
     ligand_geo_df.to_csv(output_name, index=False)
     sys.exit(0)
 
+
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('-pre_refine')
