@@ -15,10 +15,13 @@ from Bio.PDB import *
 
 #load in PDB
 def get_lig_name(PDB,lig_list):
+
     print(PDB)
     ppdb = PandasPdb()
+
     #structure = parser.get_structure(PDB, PDB+'.pdb')
     ppdb.read_pdb(PDB+'.pdb')
+
     HETATM=ppdb.df['HETATM']
     residue_names = set(HETATM['residue_name'])
     lig_res_number = 0
